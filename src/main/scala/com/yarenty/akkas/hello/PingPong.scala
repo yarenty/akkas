@@ -44,7 +44,8 @@ class Pong extends Actor {
       println("pong stopped")
       context.stop(self)
       println("and stop everything!!")
-      System.exit(0)
+      context.system.terminate //immediate termination - new since akka 2.4.1
+     // System.exit(0)
   }
 }
 
